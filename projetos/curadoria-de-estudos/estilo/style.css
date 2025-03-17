@@ -22,10 +22,8 @@ html{
     background-color: var(--cor1);
 }
 body{
-    height: 10vh;
     
 }
-
 
 header{
     text-align: center;
@@ -35,6 +33,10 @@ header{
 }
 header h1 {
     font-variant: small-caps;
+    font-size: 3rem;
+}
+header p {
+    font-size:1.2rem;
 }
 
 nav {
@@ -66,6 +68,12 @@ main{
     border-bottom-left-radius: 10px;
     padding: 15px;
 }
+
+.home{
+    /* margin-bottom: 196px; */
+    margin-bottom: 65px;
+}
+
 main p{
     line-height: 1.5em;
     padding: 10px;
