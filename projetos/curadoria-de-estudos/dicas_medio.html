@@ -13,11 +13,29 @@
             <p>tudo é questão de constancia, você tambem consegue</p>
        </header>
        <nav>
-            <a href="index.html" rel="prev">Home</a>
-            <a href="dicas.html" rel="next">Dicas</a>
-            <a href="estrategias.html">Estrategias</a>
-            <a href="feedback.html" rel="next">Feedback</a>
-       </nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">Dicas</a>
+
+                <div class="dropdown-menu">
+                    <a href="dicas.html" class="dropdown_baixo">Baixo</a>
+
+                    <a href="dicas_medio.html" class="dropdown_medio">Medio</a>
+                    
+                    <a href="dicas_alto.html" class="dropdown_alto">Alto</a>
+                </div>
+            </li>
+            <li>
+                <a href="estrategias.html">Estrategias</a>
+            </li>
+            <li>
+                <a href="feedback.html">Feedback</a>
+            </li>
+        </ul>
+        </nav>
 
        <main>
         <article>

@@ -12,9 +12,13 @@
     --fonte-titulo:"Passion One", sans-serif;
     --fonte-especial:"Red Hat Display", sans-serif;
     --fonte-padrao:"Arial","Verdana","Helvetica";
+
+    --baixo:lightgreen;
+    --medio:rgb(255, 214, 139);
+    --alto:rgb(246, 101, 101);
 }
 *{
-
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 
@@ -22,7 +26,7 @@
 html{ 
     background-color: var(--cor1);
 }
-body{
+body,html{
     height: 100vh;
     
 }
@@ -41,7 +45,7 @@ body{
 /* exclusivo da home, pagina inicial */
 header.home{
     text-align: center;
-    padding: 50px;
+    padding: 30px;
     font-family: var(--fonte-titulo);
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
 }
@@ -51,11 +55,14 @@ header.home h1 {
 }
 header.home p {
     font-size:1.2rem;
+    margin: 0px;
+    padding: 0px;
 }
 
 
-nav.home {
+nav.home{
     background-color: var(--cor5);
+    background-image: none;
     padding: 10px;
 
 }
@@ -74,9 +81,43 @@ nav.home a:hover{
     transition-duration: 0.7s;
 }
 
+.home.dropdown:hover .dropdown-menu{
+    display: block;
+    
+
+}
+
+.home.dropdown-menu{
+    
+    background-color: var(--cor5);
+    border-radius:0px 0px 10px 10px;
+    margin-top: 5px;
+    position: absolute;
+    box-shadow: 5px 5px 3px -3px  rgba(0, 0, 0, 0.362);
+    display: none;
+}
+.home.dropdown-menu a {
+    display: block;
+    margin: 3px 0px;
+    
+}
+nav.home a.dropdown_baixo:hover{
+    background-color:var(--baixo); 
+}
+nav.home a.dropdown_medio:hover{
+    background-color:var(--medio); 
+}
+nav.home a.dropdown_alto:hover{
+    background-color:var(--alto); 
+}
+
 main.home{
     /* margin-bottom: 196px; */
-    margin-bottom: 65px;
+    margin-bottom: 106px;
+}
+
+main.home p{
+    margin: 0px;
 }
 /* exclusivo da home, pagina inicial */
 
@@ -105,13 +146,17 @@ header p {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.278);
 }
 
-nav {
+nav{
     background-image:linear-gradient(to bottom,var(--cor4),var(--cor5) );
     padding: 5px;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.249);
 }
 
-nav a{
+nav li {
+    display: inline-block;
+}
+
+nav li a{
     text-decoration: none;
     color: white;
     margin: 5px;
@@ -123,6 +168,36 @@ nav a:hover{
     color: black;
     background-color: var(--cor4);
     transition-duration: 0.7s;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+    
+
+}
+
+.dropdown-menu{
+    padding: 3px;
+    background-color: var(--cor5);
+    border-radius:0px 0px 10px 10px;
+    margin-top: 3px;
+    position: absolute;
+    box-shadow: 3px 3px 3px -2px rgba(0, 0, 0, 0.362);
+    display: none;
+}
+.dropdown-menu a {
+    display: block;
+    margin: 3px 1px;
+    
+}
+nav a.dropdown_baixo:hover{
+    background-color:var(--baixo); 
+}
+nav a.dropdown_medio:hover{
+    background-color:var(--medio); 
+}
+nav a.dropdown_alto:hover{
+    background-color:var(--alto); 
 }
 /*--------------------- configurando o HEADER---------------- */
 
@@ -198,24 +273,24 @@ aside strong{
 }
 
 .baixo{
-    background-image: linear-gradient(to right, lightgreen , white);
+    background-image: linear-gradient(to right, var(--baixo) , white);
 }
 .medio{
-    background-image: linear-gradient(to right, rgb(255, 214, 139) , white);
+    background-image: linear-gradient(to right, var(--medio) , white);
 }
 .alto{
-    background-image: linear-gradient(to right, rgb(246, 101, 101) , white);
+    background-image: linear-gradient(to right, var(--alto) , white);
 }
 
 
 #baixo{
-    background-image: linear-gradient(to right, lightgreen 80%, white);
+    background-image: linear-gradient(to right,var(--baixo) 80%, white);
 }
 #medio{
-    background-image: linear-gradient(to right, rgb(255, 214, 139) 80%, white);
+    background-image: linear-gradient(to right, var(--medio) 80%, white);
 }
 #alto{
-    background-image: linear-gradient(to right, rgb(246, 101, 101) 80%, white);
+    background-image: linear-gradient(to right, var(--alto) 80%, white);
 }
 /*--------------------- configurando o MAIN---------------- */
 
