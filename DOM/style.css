@@ -1,2 +1,10 @@
-body { font-family: Arial, sans-serif; text-align: center; }
-        .box { padding: 10px; margin: 10px; border: 1px solid #ccc; }
+<style>
+    body {
+         font-family: Arial, sans-serif; text-align: center;
+    }
+    .box{
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+    }
+</style>

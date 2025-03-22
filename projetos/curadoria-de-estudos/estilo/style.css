@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root{
     --cor1:#ebffff;
@@ -9,7 +10,7 @@
     --cor5:#4992c0;
 
     --fonte-titulo:"Passion One", sans-serif;
-    --fonte-especial:"Sriracha", "cursive";
+    --fonte-especial:"Red Hat Display", sans-serif;
     --fonte-padrao:"Arial","Verdana","Helvetica";
 }
 *{
@@ -22,27 +23,92 @@ html{
     background-color: var(--cor1);
 }
 body{
+    height: 100vh;
     
 }
 
-header{
+
+
+
+
+
+
+
+
+
+
+
+/* exclusivo da home, pagina inicial */
+header.home{
     text-align: center;
     padding: 50px;
     font-family: var(--fonte-titulo);
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
 }
-header h1 {
+header.home h1 {
     font-variant: small-caps;
     font-size: 3rem;
 }
-header p {
+header.home p {
     font-size:1.2rem;
 }
 
-nav {
+
+nav.home {
     background-color: var(--cor5);
     padding: 10px;
 
+}
+
+nav.home a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+    padding: 4px;
+    border-radius: 7px;
+}
+
+nav.home a:hover{
+    color: black;
+    background-color: var(--cor4);
+    transition-duration: 0.7s;
+}
+
+main.home{
+    /* margin-bottom: 196px; */
+    margin-bottom: 65px;
+}
+/* exclusivo da home, pagina inicial */
+
+
+
+
+
+
+
+
+
+/*--------------------- configurando o HEADER---------------- */
+header{
+    text-align: center;
+    padding: 6px;
+    font-family: var(--fonte-titulo);
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor4));
+}
+header h1 {
+    font-variant: small-caps;
+    font-size: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.256);
+}
+header p {
+    font-size:1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.278);
+}
+
+nav {
+    background-image:linear-gradient(to bottom,var(--cor4),var(--cor5) );
+    padding: 5px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.249);
 }
 
 nav a{
@@ -58,6 +124,12 @@ nav a:hover{
     background-color: var(--cor4);
     transition-duration: 0.7s;
 }
+/*--------------------- configurando o HEADER---------------- */
+
+
+/*--------------------- configurando o MAIN---------------- */
+
+
 
 main{
     background-color: white;
@@ -67,18 +139,17 @@ main{
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 15px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.262);
 }
 
-.home{
-    /* margin-bottom: 196px; */
-    margin-bottom: 65px;
-}
+
 
 main p{
     line-height: 1.5em;
     padding: 10px;
     text-indent: 20px;
     text-align: justify;
+    margin:20px 0px 30px 0px;
 }
 
 main a{
@@ -98,16 +169,65 @@ main a::after{
     content: "\00A0\1F517";
 }
 
+aside{
+    margin: 20px 0px 40px 0px;
+    background-color: var(--cor1);
+
+    border-radius: 20px;
+}
+
+main h1{
+    text-align: center;
+    background-image: radial-gradient( var(--cor2), white 65%);
+    font-family: var(--fonte-especial);
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin: 10px 0pc 30px 0px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.295);
+}
+main h2{
+    background-image: linear-gradient(to right, var(--cor2), white 90%);
+    border-radius: 2px;
+    text-indent: 5px;
+    font-family: var(--fonte-especial);
+    font-weight: 800;
+}
+
+aside strong{
+    padding: 2px 4px;
+}
+
+.baixo{
+    background-image: linear-gradient(to right, lightgreen , white);
+}
+.medio{
+    background-image: linear-gradient(to right, rgb(255, 214, 139) , white);
+}
+.alto{
+    background-image: linear-gradient(to right, rgb(246, 101, 101) , white);
+}
+
+
+#baixo{
+    background-image: linear-gradient(to right, lightgreen 80%, white);
+}
+#medio{
+    background-image: linear-gradient(to right, rgb(255, 214, 139) 80%, white);
+}
+#alto{
+    background-image: linear-gradient(to right, rgb(246, 101, 101) 80%, white);
+}
+/*--------------------- configurando o MAIN---------------- */
 
 
 
-
-/* Edição do footer */
+/*--------------------- configurando o FOOTER---------------- */
 footer{
     background-color: var(--cor5);
     padding: 5px;
     text-align: center;
     color: white;
+    margin-top: 4.2rem;
 }
 
 footer a{
@@ -120,3 +240,4 @@ footer a:hover{
     text-decoration: underline;
     transition-duration: .2s;
 }
+/*--------------------- configurando o FOOTER---------------- */
