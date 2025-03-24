@@ -8,7 +8,25 @@
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
     <title>Study Strategies</title>
-    <style>#comentarios {
+    <style>
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Faz o main ocupar o espaço restante na altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Garante que o main ocupe toda a largura disponível */
+    max-width: 800px; /* Ajuste conforme o design desejado */
+    margin: 0 auto; /* Centraliza horizontalmente */ }
+    
+    #comentarios {
         max-width: 600px;
         margin: 20px auto;
         padding: 10px;
